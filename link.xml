@@ -1,0 +1,4 @@
+<linker>
+  <assembly fullname="TapTap.Relation.Runtime" preserve="all" />
+  <assembly fullname="TapTap.Relation.Mobile.Runtime" preserve="all" />
+</linker>
