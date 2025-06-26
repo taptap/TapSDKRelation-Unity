@@ -11,7 +11,6 @@ namespace TapSDK.Relation.Internal
 
         private TapTapRelationManager()
         {
-
             platformWrapper = BridgeUtils.CreateBridgeImplementation(typeof(ITapTapRelation),
                 "TapSDK.Relation") as ITapTapRelation;
         }
@@ -30,62 +29,62 @@ namespace TapSDK.Relation.Internal
 
         public void Init(string clientId, TapTapRegionType regionType, int screenOrientation)
         {
-            platformWrapper.Init(clientId, regionType, screenOrientation);
+            platformWrapper?.Init(clientId, regionType, screenOrientation);
         }
 
         public void SetOrientation(int orientation)
         {
-            platformWrapper.SetOrientation(orientation);
+            platformWrapper?.SetOrientation(orientation);
         }
 
         public void StartMessenger()
         {
-            platformWrapper.StartMessenger();
+            platformWrapper?.StartMessenger();
         }
 
         public void Prepare()
         {
-            platformWrapper.Prepare();
+            platformWrapper?.Prepare();
         }
 
         public void InviteGame()
         {
-            platformWrapper.InviteGame();
+            platformWrapper?.InviteGame();
         }
 
         public void InviteTeam(string teamId)
         {
-            platformWrapper.InviteTeam(teamId);
+            platformWrapper?.InviteTeam(teamId);
         }
 
         public void ShowTapUserProfile(string openId, string unionId)
         {
-            platformWrapper.ShowTapUserProfile(openId, unionId);
+            platformWrapper?.ShowTapUserProfile(openId, unionId);
         }
 
         public void GetNewFansCount(Action<int> callback)
         {
-            platformWrapper.GetNewFansCount(callback);
+            platformWrapper?.GetNewFansCount(callback);
         }
 
         public void GetUnreadMessageCount(Action<int> callback)
         {
-            platformWrapper.GetUnreadMessageCount(callback);
+            platformWrapper?.GetUnreadMessageCount(callback);
         }
 
         public void RegisterRelationCallback(ITapTapRelationCallback callback)
         {
-            platformWrapper.RegisterRelationCallback(callback);
+            platformWrapper?.RegisterRelationCallback(callback);
         }
 
         public void UnregisterRelationCallback(ITapTapRelationCallback callback)
         {
-            platformWrapper.UnregisterRelationCallback(callback);
+            platformWrapper?.UnregisterRelationCallback(callback);
         }
 
         public void Destroy()
         {
-            platformWrapper.Destroy();
+            platformWrapper?.Destroy();
         }
     }
 
